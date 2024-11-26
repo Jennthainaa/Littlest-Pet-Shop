@@ -1,12 +1,10 @@
-from flask import FLask
+from flask import Flask
 from config import Config
 
+
 def create_app():
-    app = FLask(__name__)
+    app = Flask(__name__)
 
     from .import routes
     routes.init_app(app)
     return app
-
-
-  
