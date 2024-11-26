@@ -7,6 +7,3 @@ def create_app():
     from .import routes
     routes.init_app(app)
     return app
-
-
-  
