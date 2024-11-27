@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-image: url(animais.jfif);
+    background-repeat: no-repeat;
+    margin-top: 3%;
+    background-size: 100vw 100vh;
+    justify-items: center;
+    align-items: center;
+    cursor: url('certo.png'), pointer;
+    
+  }
+  .wrapper{
+    width: 420px;
+     background-color:#ad4e28;
+    border: 2px solid #ad4e28;
+    backdrop-filter: blur(9px);
+    color:#ad4e28;
+    border-radius: 12px;
+    padding: 30px 20px;
+    
+
+    
+  }
+  .wrapper .logo2 {
+    display: block; /* Torna a imagem um bloco */
+    margin: 0 auto -10px; /* Centraliza horizontalmente e adiciona uma margem embaixo */
+    width: 80%; /* Ajuste conforme necessário */
+    max-width: 150px; /* Limita a largura máxima da logo */
+  }
+
+  .wrapper h1{
+    font-size: 36px;
+    text-align: center;
+    color: #faf9f1;
+  }
+  .wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    
+    margin: 30px 0;
+  }
+  .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+  }
+  .input-box input::placeholder{
+    color: #fff;
+  }
+  .input-box i{
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+  
+  }
+  .wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+    color: #faf9f1;
+  }
+  .remember-forgot label input{
+    accent-color: #fff;
+    margin-right: 3px;
+  
+  }
+  .remember-forgot a{
+    color: #fff;
+    text-decoration: none;
+  
+  }
+  .remember-forgot a:hover{
+    text-decoration: underline;
+  }
+  .wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px#0000001a;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ad4e28;
+    font-weight: 600;
+  }
+  .btn:hover{
+    background-color: #923f1e;
+    color: #faf9f1;
+  
+
+  }
+  .wrapper .register-link{
+    font-size: 15px;
+    text-align: center;
+    margin: 10px 0 15px;
+    color: #faf9f1;
+  
+  }
+  .register-link p a{
+    color: #faf9f1;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .register-link p a:hover{
+    text-decoration: underline;
+    color: #faf9f1;
+  }
