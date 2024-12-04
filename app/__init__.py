@@ -18,6 +18,10 @@ def create_app():
     from .pets import pets as pets_blueprint
     app.register_blueprint(pets_blueprint, url_prefix='/pets')
 
+    from .users import users as users_blueprint
+    app.register_blueprint(users_blueprint, url_prefix='/users')
+
+
 
     from .import routes
     routes.init_app(app)
