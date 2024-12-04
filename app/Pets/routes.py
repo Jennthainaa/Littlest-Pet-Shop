@@ -4,3 +4,4 @@ from .import pets
 @pets.route('/')
 def index():
     return render_template('pets/index.html')
+

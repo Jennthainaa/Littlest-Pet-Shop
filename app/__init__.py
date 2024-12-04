@@ -15,6 +15,10 @@ def create_app():
     db.init_app(app)
     migrate.init_app(app,db)
     
+    from .pets import pets as pets_blueprint
+    app.register_blueprint(pets_blueprint, url_prefix='/pets')
+
+
     from .import routes
     routes.init_app(app)
     return app
