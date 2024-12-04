@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Minha Loja</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-amber-800 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="/Littlest-Pet-Shop/app/static/img/logo_nome.webp" alt="Logo" height="50px" width="150px">
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#cart" class="hover:text-gray-400">Voltar ao Carrinho</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto my-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Coluna da Esquerda -->
+        <div class="col-span-2 bg-white shadow-md rounded-lg p-6">
+            <h1 class="text-2xl font-semibold mb-6">Finalize sua Compra</h1>
+    
+            <!-- Informações do Cliente -->
+            <section class="mb-8">
+                <h2 class="text-lg font-semibold mb-4">Informações do Cliente</h2>
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Nome" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <input type="text" placeholder="Sobrenome" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <input type="text" placeholder="CPF" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <input type="text" placeholder="Celular" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div class="mt-4">
+                        <input type="email" placeholder="E-mail" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <a href="#" class="text-blue-600 text-sm hover:underline block mt-2">Alterar e-mail</a>
+                    </div>
+                </form>
+            </section>
+    
+            <!-- Endereço de Entrega -->
+            <section class="mb-8">
+                <h2 class="text-lg font-semibold mb-4">Endereço de Entrega</h2>
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Endereço" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <input type="text" placeholder="Número" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <input type="text" placeholder="Complemento" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <input type="text" placeholder="CEP" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <input type="text" placeholder="Cidade" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <input type="text" placeholder="Estado" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                </form>
+            </section>
+    
+            <!-- Opções de Frete -->
+            <section class="mb-8">
+                <h2 class="text-lg font-semibold mb-4">Opções de Frete</h2>
+                <div class="space-y-2">
+                    <label class="flex items-center space-x-4 p-4 border rounded-lg hover:bg-gray-100 cursor-pointer">
+                        <input type="radio" name="frete" value="padrao" class="h-5 w-5">
+                        <div>
+                            <p class="font-semibold">Frete Padrão</p>
+                            <p class="text-sm text-gray-500">Entrega em até 10 dias úteis - R$ 10,00</p>
+                        </div>
+                    </label>
+                    <label class="flex items-center space-x-4 p-4 border rounded-lg hover:bg-gray-100 cursor-pointer">
+                        <input type="radio" name="frete" value="expresso" class="h-5 w-5">
+                        <div>
+                            <p class="font-semibold">Frete Expresso</p>
+                            <p class="text-sm text-gray-500">Entrega em até 3 dias úteis - R$ 20,00</p>
+                        </div>
+                    </label>
+                </div>
+            </section>
+    
+            <!-- Pagamento -->
+            <section>
+                <h2 class="text-lg font-semibold mb-4">Forma de Pagamento</h2>
+                <div class="space-y-2">
+                    <label class="flex items-center space-x-4 p-4 border rounded-lg hover:bg-gray-100 cursor-pointer">
+                        <input type="radio" name="pagamento" value="cartao" class="h-5 w-5">
+                        <div>
+                            <p class="font-semibold">Cartão de Crédito</p>
+                            <p class="text-sm text-gray-500">Parcele em até 12x</p>
+                        </div>
+                    </label>
+                    <label class="flex items-center space-x-4 p-4 border rounded-lg hover:bg-gray-100 cursor-pointer">
+                        <input type="radio" name="pagamento" value="boleto" class="h-5 w-5">
+                        <div>
+                            <p class="font-semibold">Boleto Bancário</p>
+                            <p class="text-sm text-gray-500">Pagamento à vista</p>
+                        </div>
+                    </label>
+                </div>
+            </section>
+        </div>
+    
+        <!-- Coluna da Direita -->
+        <div class="bg-white shadow-md rounded-lg p-6 col-span-1 sticky top-0">
+            <h2 class="text-lg font-semibold mb-4">Resumo do Pedido</h2>
+            <div class="space-y-4">
+                <div class="flex justify-between">
+                    <p>Produto 1</p>
+                    <p>R$ 150,00</p>
+                </div>
+                <div class="flex justify-between">
+                    <p>Frete</p>
+                    <p>R$ 10,00</p>
+                </div>
+                <hr class="my-2">
+                <div class="flex justify-between text-lg font-semibold">
+                    <p>Total</p>
+                    <p>R$ 160,00</p>
+                </div>
+            </div>
+            <button class="w-full mt-6 bg-amber-900 text-white px-6 py-3 rounded-lg hover:bg-amber-950">
+                Confirmar Compra
+            </button>
+            
+            <!-- Avaliações dos Usuários -->
+            <section class="mt-8">
+                <h2 class="text-lg font-semibold mb-4">Avaliações dos Usuários</h2>
+        
+                <!-- Formulário de Avaliação -->
+                <textarea id="review-text" placeholder="Deixe sua avaliação..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 mb-4"></textarea>
+                <div class="flex items-center space-x-2">
+                    <!-- Estrelas para a avaliação -->
+                    <span class="text-yellow-500" onclick="rate(1)">★</span>
+                    <span class="text-yellow-500" onclick="rate(2)">★</span>
+                    <span class="text-yellow-500" onclick="rate(3)">★</span>
+                    <span class="text-yellow-500" onclick="rate(4)">★</span>
+                    <span class="text-yellow-500" onclick="rate(5)">★</span>
+                </div>
+                <div class="mt-2">
+                    <button id="submit-review" class="bg-amber-900 text-white px-6 py-3 rounded-lg hover:bg-amber-950">Enviar Avaliação</button>
+                </div>
+        
+                <!-- Avaliações Exibidas -->
+                <div id="reviews-container" class="mt-6">
+                    <!-- Avaliações serão inseridas aqui -->
+                </div>
+        
+                <!-- Pessoas que Avaliaram -->
+<h3 class="text-lg font-semibold mt-8 mb-4">Pessoas que Avaliaram</h3>
+<div id="reviewers-container" class="space-y-4">
+    <!-- Avaliação do Usuário Anônimo -->
+    <div class="flex items-center space-x-2">
+        <img src="https://randomuser.me/api/portraits/lego/1.jpg" alt="Usuário Anônimo" class="w-10 h-10 rounded-full">
+        <div>
+            <span class="font-semibold">Anônimo</span>
+            <div class="flex text-yellow-500">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+            </div>
+            <p class="mt-2 text-gray-600">"Adorei o produto! Superou minhas expectativas e recomendo a todos!"</p>
+        </div>
+    </div>
+
+    <!-- Avaliação de Maria -->
+    <div class="flex items-center space-x-2">
+        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Maria" class="w-10 h-10 rounded-full">
+        <div>
+            <span class="font-semibold">Maria</span>
+            <div class="flex text-yellow-500">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+            </div>
+            <p class="mt-2 text-gray-600">"Excelente! O produto chegou no prazo e com qualidade excelente!"</p>
+        </div>
+    </div>
+
+    <!-- Avaliação de João -->
+    <div class="flex items-center space-x-2">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="João" class="w-10 h-10 rounded-full">
+        <div>
+            <span class="font-semibold">João</span>
+            <div class="flex text-yellow-500">
+                <span>★</span><span>★</span><span>★</span><span>☆</span><span>☆</span>
+            </div>
+            <p class="mt-2 text-gray-600">"Gostei muito do serviço, mas achei o preço um pouco alto."</p>
+        </div>
+    </div>
+</div>
+
+            </section>
+        </div>
+        
+    </main>
+    
+    <footer class="bg-amber-800 text-white py-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2024 Minha Marca. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        let currentRating = 0;
+    
+        // Função para selecionar a nota da avaliação
+        function rate(stars) {
+            currentRating = stars;
+            // Alterar a cor das estrelas com base na avaliação
+            let starsList = document.querySelectorAll('span');
+            starsList.forEach((star, index) => {
+                if (index < stars) {
+                    star.classList.add('text-yellow-500');
+                    star.classList.remove('text-gray-400');
+                } else {
+                    star.classList.add('text-gray-400');
+                    star.classList.remove('text-yellow-500');
+                }
+            });
+        }
+    
+        // Função para enviar a avaliação
+        document.getElementById('submit-review').addEventListener('click', function() {
+            let reviewText = document.getElementById('review-text').value;
+            let reviewerName = prompt('Qual é o seu nome?');
+            
+            if (reviewText && currentRating > 0 && reviewerName) {
+                // Adicionando a avaliação à lista de avaliações exibidas
+                let reviewContainer = document.getElementById('reviews-container');
+                let newReview = document.createElement('div');
+                newReview.classList.add('border-b', 'py-4');
+    
+                newReview.innerHTML = `
+                    <p class="font-semibold">${reviewerName}</p>
+                    <div class="flex">
+                        ${'★'.repeat(currentRating)}
+                        ${'★'.repeat(5 - currentRating).replace('★', '☆')}
+                    </div>
+                    <p class="text-gray-600 mt-2">${reviewText}</p>
+                `;
+                reviewContainer.appendChild(newReview);
+    
+                // Adicionando o nome da pessoa à lista de "Pessoas que Avaliaram"
+                let reviewersContainer = document.getElementById('reviewers-container');
+                let newReviewer = document.createElement('div');
+                newReviewer.classList.add('flex', 'items-center', 'space-x-2');
+                newReviewer.innerHTML = `
+                    <span class="font-semibold">${reviewerName}</span>
+                    <div class="flex text-yellow-500">
+                        ${'★'.repeat(currentRating)}${'★'.repeat(5 - currentRating).replace('★', '☆')}
+                    </div>
+                `;
+                reviewersContainer.appendChild(newReviewer);
+    
+                // Limpar o formulário após a avaliação ser enviada
+                document.getElementById('review-text').value = '';
+                currentRating = 0;
+                rate(0);
+            } else {
+                alert('Por favor, preencha a avaliação, escolha uma nota e insira seu nome.');
+            }
+        });
+    </script>
+    
+</body>
+</html>
