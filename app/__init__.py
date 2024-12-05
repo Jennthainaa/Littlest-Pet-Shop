@@ -21,6 +21,10 @@ def create_app():
     from .users import users as users_blueprint
     app.register_blueprint(users_blueprint, url_prefix='/users')
 
+    from .payment import payment as payment_blueprint
+    app.register_blueprint(payment_blueprint, url_prefix='/payment')
+
+
 
 
     from .import routes
